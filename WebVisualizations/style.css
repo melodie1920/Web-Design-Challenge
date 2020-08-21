@@ -78,6 +78,10 @@ h5 {
     top: 0;
   }
   
+.th {
+    text-align: center;  
+}
+
   /* Style the active link (or home/logo) */
   .active {
     background-color: rgb(44, 185, 178);
