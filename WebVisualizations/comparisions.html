@@ -5,15 +5,13 @@
     <meta charset="UTF-8">
     <title>Latitude Comparisons</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="index.html">Latitude</a>
+        <a class="navbar-brand" href="../index.html">Latitude</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -38,12 +36,30 @@
         </div>
       </nav>
 
-<br>
+<!-- Top Navigation Menu -->
+<div class="topnav" id="small_nav">
+  <a href="../index.html" class="active">Latitude</a>
+  <!-- Navigation links (hidden by default) -->
+  <div id="myLinks">
+    <a href="WebVisualizations/comparisions.html">Comparisons</a>
+    <a href="WebVisualizations/data.html">Data</a>
+    <a href="WebVisualizations/maxtemperature.html">Plots - Max Temperature</a>
+    <a href="WebVisualizations/humidity.html">Plots - Humidity</a>
+    <a href="WebVisualizations/cloudiness.html">Plots - Cloudiness</a>
+    <a href="WebVisualizations/windspeed.html">Plots - Wind Speed</a>
+  </div>
+
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
     <div class="container">
         <div style="background-color:white;">
             <div class="row">
                 <div class="col">
                     <h1>Comparison: Latitude vs X</h1>
+                    <hr>
                     <p> Click any plot to get an in-depth analysis.</p>
                 </div>
             </div>
@@ -53,28 +69,44 @@
                 <div class="col">
                     <h5>vs Max Temperature</h5>
                     <a href="maxtemperature.html">
-                    <img src="Resources/assets/images/Fig1.png" alt="Latitude vs Max Temperature" width="525" height="290" /></a>
+                    <img src="Resources/assets/images/Fig1.png" alt="Latitude vs Max Temperature" width="500" height="290" /></a>
                 </div>
                 <div class="col">
                     <h5>vs Humidity</h5>
                     <a href="humidity.html">
-                    <img src="Resources/assets/images/Fig2.png" alt="Latitude vs Humidity" width="525" height="290" /></a>
+                    <img src="Resources/assets/images/Fig2.png" alt="Latitude vs Humidity" width="500" height="290" /></a>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
                     <h5>vs Cloudiness</h5>
                     <a href="cloudiness.html">
-                    <img src="Resources/assets/images/Fig3.png" alt="Latitude vs Cloudiness" width="525" height="290" /></a>
+                    <img src="Resources/assets/images/Fig3.png" alt="Latitude vs Cloudiness" width="500" height="290" /></a>
                 </div>
                 <div class="col">
                     <h5>vs Wind Speed</h5>
                     <a href="windspeed.html">
-                    <img src="Resources/assets/images/Fig4.png" alt="Latitude vs Wind Speed" width="525" height="290" /></a>
+                    <img src="Resources/assets/images/Fig4.png" alt="Latitude vs Wind Speed" width="500" height="290" /></a>
                 </div>
             </div>
         </div>
     </div>
 
+
+    <script>
+      function myFunction() {
+     var x = document.getElementById("myLinks");
+     if (x.style.display === "block") {
+       x.style.display = "none";
+     } else {
+       x.style.display = "block";
+     }
+   }
+    </script>
+       
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>   
+   
 </body>
 </html>

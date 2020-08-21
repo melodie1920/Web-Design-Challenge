@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <title>Latitude vs Wind Speed</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
 </head>
 
 <body>
@@ -38,43 +36,67 @@
         </div>
       </nav>
 
-    <br>
-    <div class="main">
+    <!-- Top Navigation Menu -->
+    <div class="topnav" id="small_nav">
+      <a href="../index.html" class="active">Latitude</a>
+      <!-- Navigation links (hidden by default) -->
+      <div id="myLinks">
+        <a href="comparisions.html">Comparisons</a>
+        <a href="data.html">Data</a>
+        <a href="maxtemperature.html">Plots - Max Temperature</a>
+        <a href="humidity.html">Plots - Humidity</a>
+        <a href="cloudiness.html">Plots - Cloudiness</a>
+        <a href="windspeed.html">Plots - Wind Speed</a>
+      </div>
+
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
     <div class="container">
-        <h1>Wind Speed</h1>
-        <img src="Resources/assets/images/Fig4.png" alt="Latitude vs Wind Speed" width=675px height=500px/>
-        <p> 
-            As the latitude increases closer to the equator the temperature increases and as latitude increases further and is moving away from the equator the temperature decreases. 
-        </p>
-
-    </div>
-    </div>
-        
-    <div class="sidenav">
-        <h3>Visualizations</h3>
-        <div class= "container">
-            <div class="row">
-                <div class="col-md-6">
-                    <a href="maxtemperature.html">
-                    <img src="Resources/assets/images/Fig1.png" alt="Latitude vs Max Temperature" width="200" height="200" /></a>
-                </div>
-                <div class="col-md-6">
-                    <a href="humidity.html">
-                    <img src="Resources/assets/images/Fig2.png" alt="Latitude vs Humidity" width="200" height="200" /></a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <a href="cloudiness.html">
-                    <img src="Resources/assets/images/Fig3.png" alt="Latitude vs Cloudiness" width="200" height="200" /></a>
-                </div>
-                <div class="col-md-6">
-                    <a href="windspeed.html">
-                    <img src="Resources/assets/images/Fig4.png" alt="Latitude vs Wind Speed" width="200" height="200" /></a>
-                </div>
-            </div>
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="box white">
+            <h1>Wind Speed</h1>
+            <hr>
+            <img src="Resources/assets/images/Fig4.png" alt="Latitude vs Wind Speed" class="img-fluid">
+            <p>There does not appear to be any correlation between wind speed and latitude. As latitude increases or decreases, wind speed does not appear to be affected.</p>
+          </div>
         </div>
-    </div>
-</body>
 
+        <div class="col-lg-5">
+          <div class="box white">
+            <h3>Visualizations</h3>
+            <hr>
+            <a href="maxtemperature.html" target="_self">
+              <img src="Resources/assets/images/Fig1.png" alt="Latitude vs Max Temperature" width="200" height="200" /></a>
+            <a href="humidity.html" target="_self">
+              <img src="Resources/assets/images/Fig2.png" alt="Latitude vs Humidity" width="200" height="200" /></a>
+            <a href="cloudiness.html" target="_self">
+              <img src="Resources/assets/images/Fig3.png" alt="Latitude vs Cloudiness" width="200" height="200" /></a>
+            <a href="windspeed.html" target="_self">
+              <img src="Resources/assets/images/Fig4.png" alt="Latitude vs Wind Speed" width="200" height="200" /></a>
+          </div>    
+        </div>
+
+      </div>
+    </div> 
+
+  <script>
+      function myFunction() {
+     var x = document.getElementById("myLinks");
+     if (x.style.display === "block") {
+       x.style.display = "none";
+     } else {
+       x.style.display = "block";
+     }
+   }
+    </script>
+       
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>   
+   
+</body>
 </html>
